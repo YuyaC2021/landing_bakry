@@ -1,0 +1,419 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.514);
+}
+
+body {
+  position: relative;
+}
+
+.backGround {
+  background-color: rgba(104, 71, 27, 0.438);
+  height: 100vh;
+  overflow: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.backGround > form {
+  background-color: #251602;
+  width: 600px;
+  padding: 20px 10px;
+}
+
+.backGround > form #heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.backGround > form > div.main > div {
+  margin-bottom: 35px;
+}
+
+.backGround > form > div.main > div * {
+  margin: 5px;
+}
+
+.backGround > form > div.main > div .inf {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.644);
+  background-color: #55442e;
+}
+
+.backGround > form > div.main > div input.inf.ng-invalid.ng-touched {
+  background-color: rgba(255, 0, 0, 0.226);
+}
+
+.backGround > form > div.main > div input.inf.ng-valid {
+  background-color: #55442e;
+}
+
+.backGround > form > div.main > div select option {
+  background-color: #55442e;
+}
+
+.backGround > form > div.main > div select::-webkit-input-placeholder {
+  color: black !important;
+}
+
+.backGround > form > div.main > div select:-ms-input-placeholder {
+  color: black !important;
+}
+
+.backGround > form > div.main > div select::-ms-input-placeholder {
+  color: black !important;
+}
+
+.backGround > form > div.main > div select::placeholder {
+  color: black !important;
+}
+
+.backGround > form > div.main > div select.inf.ng-invalid.ng-touched {
+  background-color: rgba(255, 0, 0, 0.212);
+}
+
+.backGround > form > div.main > div select.inf.ng-valid {
+  background-color: #55442e;
+}
+
+.backGround > form > div.main > div .items {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.backGround > form > div.main > div .items > div {
+  width: 45%;
+}
+
+.backGround > form > div.main > div .items > div > p:first-child {
+  width: 100%;
+  height: 50px;
+}
+
+.backGround > form > div.main > div .items > div > p:nth-child(2) {
+  font-weight: bold;
+}
+
+.backGround > form > div.main > div .items > div > p:last-child {
+  text-align: end;
+}
+
+.backGround > form > div.main > div .items > div > img {
+  width: 100%;
+  height: 100px;
+}
+
+.backGround > form > div.main > div .pricing {
+  border: 1px solid rgba(255, 255, 255, 0.644);
+  border-radius: 5px;
+  background-color: #55442e;
+}
+
+.backGround > form > div.main > div .pricing > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.backGround > form > div.main > div .pricing > p {
+  text-align: end;
+}
+
+.backGround > form > div.main #submit {
+  text-align: end;
+}
+
+.backGround > form > div.main #submit > input {
+  width: 100px;
+  height: 30px;
+  border: none;
+  outline: none;
+  background-color: orange;
+  color: black;
+}
+
+input {
+  text-align: center !important;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  display: none;
+}
+
+#popupBgc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.692);
+  z-index: 20;
+}
+
+#popupBgc * {
+  z-index: 30;
+}
+
+#popupBgc .popupForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 700px;
+  height: 300px;
+  background-color: #80511c;
+  border-radius: 10px;
+  color: white;
+  padding: 40px;
+}
+
+#popupBgc .popupForm > div {
+  width: 45vw;
+  height: 100%;
+  margin: 0 10px;
+}
+
+#popupBgc .popupForm > div:first-child img {
+  width: 100%;
+  height: 100%;
+}
+
+#popupBgc .popupForm > div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#popupBgc .popupForm > div:last-child h2 {
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+}
+
+#popupBgc .popupForm > div:last-child .popupPrice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+#popupBgc .popupForm > div:last-child .popupBottons {
+  width: 100%;
+}
+
+#popupBgc .popupForm > div:last-child .popupBottons input {
+  width: 45%;
+  height: 40px;
+  border: 1px solid white;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  margin-right: 10px;
+  background-color: #be9464;
+}
+
+#popupBgc .popupForm > div:last-child .popupBottons input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+#popupBgc .popupForm > div:last-child .popupBottons input:-ms-input-placeholder {
+  text-align: center;
+}
+
+#popupBgc .popupForm > div:last-child .popupBottons input::-ms-input-placeholder {
+  text-align: center;
+}
+
+#popupBgc .popupForm > div:last-child .popupBottons input::placeholder {
+  text-align: center;
+}
+
+#popupBgc .popupForm > div:last-child .popupBottons button {
+  width: 45%;
+  height: 40px;
+  border: none;
+  outline: none;
+  color: black;
+  cursor: pointer;
+  background-color: orange;
+}
+
+#listBgc {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.507);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#listBgc .listForm {
+  width: 700px;
+  height: auto;
+  background-color: #80511c;
+  border-radius: 5px;
+  padding: 40px 30px;
+}
+
+#listBgc .listForm table {
+  width: 100%;
+  height: 60%;
+}
+
+#listBgc .listForm table tr th {
+  text-align: start;
+}
+
+#listBgc .listForm table tr td {
+  border-bottom: 1px solid white;
+  padding: 20px;
+}
+
+#listBgc .listForm table tr td input {
+  background-color: #c09461;
+  padding: 20px;
+  border-radius: 30px;
+  border: 1px solid white;
+  outline: none;
+  width: 100px;
+}
+
+#listBgc .listForm div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid white;
+}
+
+#listBgc .listForm .listButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#listBgc .listForm .listButtons button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  outline: none;
+  cursor: pointer;
+}
+
+#listBgc .listForm .listButtons button:first-child {
+  background-color: rgba(255, 255, 255, 0.178);
+  color: orange;
+  border: 1px solid white;
+}
+
+#listBgc .listForm .listButtons button:last-child {
+  border: none;
+  background-color: orange;
+  color: #a5612a;
+}
+/*# sourceMappingURL=assignment.css.map */

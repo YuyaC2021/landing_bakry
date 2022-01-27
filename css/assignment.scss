@@ -1,0 +1,255 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.514);
+}
+@mixin flexing($direct:row,$justify:center,$align:center){
+    display: flex;
+    flex-direction: $direct;
+    justify-content: $justify;
+    align-items: $align;
+}
+body{
+    position: relative;
+}
+.backGround{
+    background-color: rgba(104, 71, 27, 0.438);
+    height: 100vh;
+    overflow: scroll;
+    @include flexing($align:flex-start);
+    &>form{
+        background-color: rgb(37, 22, 2);
+        width: 600px;
+        padding: 20px 10px;
+        #heading{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        &>div.main{
+            &>div{
+                margin-bottom: 35px;
+                *{
+                    margin:5px;
+                }
+                .inf{
+                    width: 100%;
+                    padding: 8px;
+                    border: 1px solid rgba(255, 255, 255, 0.644);
+                    background-color: rgb(85, 68, 46);
+                }    
+                input.inf.ng-invalid.ng-touched {
+                    background-color: rgba(255, 0, 0, 0.226) ;
+                }
+                input.inf.ng-valid{
+                    background-color: rgb(85, 68, 46);
+                }
+            
+                select option{
+                    background-color: rgb(85, 68, 46);
+                }
+                select::placeholder{
+                    color: black !important;
+                }
+                select.inf.ng-invalid.ng-touched{
+                    background-color: rgba(255, 0, 0, 0.212);
+                }
+                select.inf.ng-valid{
+                    background-color: rgb(85, 68, 46);
+                }
+                .items{
+                    cursor: pointer;
+                    display: flex;
+                    flex-wrap: wrap;
+                    &>div{
+                        width: 45%;
+                        &>p:first-child{
+                            width: 100%;
+                            height: 50px;
+                        }
+                        &>p:nth-child(2){
+                           font-weight: bold;
+                        }
+                        &>p:last-child{
+                            text-align: end;
+                        }
+                        &>img{
+                            width: 100%;
+                            height: 100px;
+                        }
+
+                    }
+                }
+                .pricing{
+                    border: 1px solid rgba(255, 255, 255, 0.644);
+                    border-radius: 5px;
+                    background-color: rgb(85, 68, 46);
+                    &>div{
+                        @include flexing($justify:space-between);
+                    }
+                    &>p{
+                        text-align: end;
+                    }
+                }
+            }
+            #submit{
+                text-align: end;
+                &>input{
+                    width: 100px;
+                    height: 30px;
+                    border: none;
+                    outline: none;
+                    background-color: orange;
+                    color: black;
+                }
+            }
+            
+        }
+       
+    }
+}
+input{
+    text-align: center !important;
+}
+input[type=number]::-webkit-inner-spin-button{
+    display: none;
+}
+#popupBgc{
+    @include flexing;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.692);
+    z-index: 20;
+    *{
+        z-index: 30;
+    }
+    .popupForm{
+        
+        @include flexing;
+        width: 700px;
+        height: 300px;
+        background-color: rgb(128, 81, 28);
+        border-radius: 10px;
+        color: white;
+        padding: 40px;
+        &>div{
+            width: 45vw;
+            height: 100%;
+            margin: 0 10px;
+            &:first-child{
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &:last-child{
+                @include flexing($direct:column,$justify:flex-start,$align:flex-start);
+                h2{
+                    flex-grow: 3;
+                }
+                .popupPrice{
+                    @include flexing($justify:space-between);
+                    width: 100%;
+                }    
+                .popupBottons{
+                    width: 100%;
+                   input{
+                       width: 45%;
+                       height: 40px;
+                       border: 1px solid white;
+                       outline: none;
+                       text-decoration: none;
+                       border-radius: 50px;
+                       margin-right: 10px;
+                       background-color: rgb(190, 148, 100);
+                        &::placeholder{
+                            text-align: center;
+                        }
+                    }
+                   button{
+                    width: 45%;
+                    height: 40px;
+                    border: none;
+                    outline: none;
+                    color: black;
+                    cursor: pointer;
+                    background-color: orange;
+                   }
+                }        
+            }
+        }
+    }
+}
+
+#listBgc{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.507);
+    overflow: hidden;
+    @include flexing;
+    .listForm{
+        width: 700px;
+        height: auto;
+        background-color: rgb(128, 81, 28);
+        border-radius: 5px;
+        padding: 40px 30px;
+        table{
+            width: 100%;
+            height: 60%;
+            
+            tr{
+                th{
+                    text-align: start;
+                }
+                td{
+                    border-bottom: 1px solid white;
+                    padding: 20px;
+                    input{
+                        background-color: rgb(192, 148, 97);
+                        padding: 20px;
+                        border-radius: 30px;
+                        border: 1px solid white;
+                        outline: none;
+                        width: 100px;
+                    }
+                }
+            }
+            
+        }
+        div{
+            @include flexing($justify:space-between);
+            padding: 20px 0;
+            border-bottom: 1px solid white;
+        }
+        .listButtons{
+            @include flexing($justify:flex-end);
+            button{
+                margin-right: 10px;
+                padding: 10px 20px;
+                border-radius: 50px;
+                outline: none;
+                cursor: pointer;
+                &:first-child{
+                    background-color: rgba(255, 255, 255, 0.178);
+                    color: orange;
+                    border: 1px solid white;
+                }
+                &:last-child{
+                    border: none;
+                    background-color: orange;
+                    color: rgb(165, 97, 42);
+                }
+            }
+        }
+    }
+}
+
+
+
+
